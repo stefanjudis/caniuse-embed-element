@@ -2,6 +2,8 @@
 
 > A custom elements wrapper around [Ire Aderinokun](https://twitter.com/ireaderinokun)'s [caniuse embed service](https://caniuse.bitsofco.de/)
 
+![A rendered can use table](./screenshot.png)
+
 ## Basic usage
 
 ```html
