@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>caniuse embed element</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-size: 1.5em;
+    }
+  </style>
+  <!-- let's bring in web-vitals -->
+  <!-- load the styled custom element script -->
+  <!-- <script src="https://unpkg.com/web-vitals-element@1.0.1/dist/web-vitals-element.styled.min.js" async></script> -->
+  <script src="../dist/caniuse-embed-element.js"></script>
+</head>
+
+<body>
+  <h1>web vitals custom element</h1>
+  <!-- use the web-vitals element -->
+  <!-- define the metrics that you're interested in -->
+  <!-- show a message for unsupported metrics in other browsers -->
+  <p><caniuse-embed feature="css-focus-within"></caniuse-embed></p>
+  <p><caniuse-embed feature="mdn-css__properties__z-index" periods="future_1,current"></caniuse-embed></p>
+  <p><caniuse-embed feature="focusin-focusout-events" show-accessible-colors="true"></caniuse-embed></p>
+</body>
+
+</html>
