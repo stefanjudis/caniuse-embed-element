@@ -8,9 +8,8 @@
 
 ```html
 <!-- Include the custom element script -->
-
 <script src="node_modules/caniuse-embed-element/dist/caniuse-embed-element.min.js"></script>
-<!-- Or from unpkg.com -->
+<!-- Or from unpkg.com (other npm CDNs work too)-->
 <script src="https://unpkg.com/caniuse-embed-element/dist/caniuse-embed-element.min.js"></script>
 ```
 
