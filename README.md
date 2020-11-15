@@ -1,47 +1,41 @@
-# web-vitals-element
+# caniuse-embed-element
 
-> Bring [web vitals](https://github.com/GoogleChrome/web-vitals) quickly into your page using custom elements
-
-![web-vitals-element in styled and unstyled version](./screenshot.png)
-
-[See it in action on CodePen](https://codepen.io/stefanjudis/pen/wvGzvWx).
+> A custom elements wrapper around [Ire Aderinokun](https://twitter.com/ireaderinokun)'s [caniuse embed service](https://caniuse.bitsofco.de/)
 
 ## Basic usage
 
 ```html
 <!-- Include the custom element script -->
 
-<!-- Unstyled (installed locally) -->
-<script src="node_modules/web-vitals-element/dist/web-vitals-element.min.js"></script>
-<!-- Unstyled from unpkg.com -->
-<script src="https://unpkg.com/web-vitals-element@1.0.1/dist/web-vitals-element.min.js"></script>
-
-<!-- Styled (installed locally) -->
-<script src="node_modules/web-vitals-element/dist/web-vitals-element.styled.min.js"></script>
-<!-- Styled from unpkg.com -->
-<script src="https://unpkg.com/web-vitals-element@1.0.1/dist/web-vitals-element.styled.min.js"></script>
+<script src="node_modules/caniuse-embed-element/dist/caniuse-embed-element.min.js"></script>
+<!-- Or from unpkg.com -->
+<script src="https://unpkg.com/caniuse-embed-element/dist/caniuse-embed-element.min.js"></script>
 ```
 
-_The element does not render shadow DOM. You can style it like any other element in your HTML page._
-
-After loading the element script, use the `web-vitals` element in your HTML.
+After loading the element script, use the `caniuse-embed` element in your HTML.
 
 ```html
-<!-- Basic usage -->
-<web-vitals></web-vitals>
+<!-- `feature` is the only required attribute -->
+<caniuse-embed feature="css-focus-within"></caniuse-embed>
 
-<!-- Define the metrics you care about -->
-<web-vitals cls fcp fid lcp ttfb></web-vitals>
+<!-- define the timeframe you're interested in -->
+<caniuse-embed
+  feature="mdn-css__properties__z-index"
+  periods="future_1,current"
+></caniuse-embed>
 
-<!-- Show message about not support metrics -->
-<web-vitals show-unsupported></web-vitals>
+<!-- use accesssible colors -->
+<caniuse-embed
+  feature="focusin-focusout-events"
+  show-accessible-colors="true"
+></caniuse-embed>
 ```
-
-Currently supported metrics: `cls`, `fcp`, `fid`, `lcp`, `ttfb`. Read more about these in [the web-vitals documentation](https://github.com/GoogleChrome/web-vitals).
 
 ## Contributing
 
-*I'd love to see more themes for the web vitals element box – the fancier the better!* If you're interested in contributing some fancy looks, please [open an issue](https://github.com/stefanjudis/web-vitals-element/issues/new).
+This custom element is really just a wrapper around Ire's hard work on [caniuse.bitsofco.de](https://caniuse.bitsofco.de/) because I prefer custom elements. :)
+
+And I don't plan to add any new features to it.
 
 ## Code of conduct
 
